@@ -1,0 +1,18 @@
+
+spring:
+  application:
+    name: Spring-Demo-Share-Svc
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            loggerLevel: BASIC
+            defaultRequestHeaders:
+              Accept:
+                - application/json
+          YahooFinancialAPI:
+            url: https://query1.finance.yahoo.com/v7/finance
+            defaultRequestHeaders:
+              Accept:
+                - text/html
